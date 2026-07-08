@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  background: #050608;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+::selection {
+  background: #d9a62e;
+  color: #050608;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #101216;
+}
+::-webkit-scrollbar-thumb {
+  background: #262b33;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4150;
+}
+
+/* diagonal hazard-stripe accent, used sparingly as a brand signature */
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #d9a62e 0,
+    #d9a62e 10px,
+    #050608 10px,
+    #050608 20px
+  );
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area,
+  #print-area * {
+    visibility: visible !important;
+  }
+  #print-area {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+  }
+}
